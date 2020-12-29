@@ -1,0 +1,220 @@
+html, body {
+  box-sizing: border-box;
+  color: rgb(29, 50, 143);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5%;
+  margin: 0px;
+}
+
+/*DeskTop*/
+@media (min-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-areas:
+                    "h h"
+                    "m s"
+                    "f f";
+        grid-template-rows: 1fr 6fr 1fr;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1%;
+        
+    }
+    .main {
+        display: grid;
+        grid-template-areas:
+                    "c1 c2 c3"
+                    "c4 c5 c6"
+                    "c7 c8 c9";
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1%;
+    }
+    .pie, .cake, .small_cake, .roll, .cheese_cake {
+        display: grid;
+        grid-template-areas:
+                        "p n"
+                        "c c";
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1%;
+        padding: 2% 2% 0 2%;
+    }
+    img {
+        margin: auto 0;
+        height: 90%;
+        width: auto;
+    }
+    .aside {
+        display: grid;
+        grid-template-areas: "h_l" "b_p" "b_r" "b_h" "b_s" "b_c" "res";
+        grid-gap: 5%;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .button_pie, .button_roll, .button_сheese_cake, .button_small_cake, .button_cake, .button_reset {
+        height: 100%;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        border-radius: 5px;
+        background-color: #dadada;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 350px) and (max-width: 730px) {
+    body {
+        display: grid;
+        grid-template-areas:
+                        "h"
+                        "s"
+                        "m"
+                        "f";
+        grid-template-rows: 1fr 3fr 6fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1%;
+    }
+    .main {
+        display: grid;
+        grid-template-areas:
+                    "c1 c2 c3"
+                    "c4 c5 c6"
+                    "c7 c8 c9";
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1%;
+    }
+    .pie, .cake, .small_cake, .roll, .cheese_cake {
+        display: grid;
+        grid-template-areas:
+                        "p"
+                        "n";
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1%;
+        padding: 2% 2% 0 2%;
+    }
+    .aside {
+        display: grid;
+        grid-template-areas:
+                "h_l h_l h_l"
+                "b_p b_r b_h"
+                "b_s b_c res";
+        grid-gap: 0.5%;
+        grid-template-rows: 1fr repeat(2, 2fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .calorie {
+        display: none;
+    }
+    img {
+        margin: 0 auto;
+        height: auto;
+        width: 100%; 
+    }
+    .button_pie, .button_roll, .button_сheese_cake, .button_small_cake, .button_cake, .button_reset {
+        height: 50%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        border-radius: 5px;
+        background-color: #dadada;
+    }
+}
+/*Phone*/
+@media (max-width: 500px) {
+    body { 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr;
+    }
+    .pie, .cake, .small_cake, .roll, .cheese_cake {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1%;
+    }
+    .name, .calorie {
+        display: none;
+    }
+    img {
+        margin: 0 auto;
+        height: auto;
+        width: 100%; 
+    }
+    .button_pie, .button_roll, .button_сheese_cake, .button_small_cake, .button_cake, .button_reset {
+        height: 50%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        border-radius: 5px;
+        background-color: #dadada;
+    }
+}
+
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .aside {
+    border-radius: 5px;
+    border: 1px solid #b9b9b9;
+    background-color: #f0f0f0;
+}
+
+.c1:hover, .c2:hover, .c3:hover, .c4:hover, .c5:hover, .c6:hover, .c7:hover, .c8:hover, .c9:hover {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title strong {
+    color: red;
+}
+
+.aside p {
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button_pie:hover, .button_roll:hover, .button_сheese_cake:hover, .button_small_cake:hover, .button_cake:hover, .button_reset:hover {
+    border: 1px solid #bdbdbd;
+}
+
+.button_pie:active, .button_roll:active, .button_сheese_cake:active, .button_small_cake:active, .button_cake:active, .button_reset:active {
+    background-color: #f0f0f0;
+    border: 1px solid #dadada;
+}
+.header_list {grid-area: h_l;}
+.button_pie {grid-area: b_p;}
+.button_roll {grid-area: b_r;}
+.button_сheese_cake {grid-area: b_h;}
+.button_small_cake {grid-area: b_s;}
+.button_cake {grid-area: b_c;}
+.button_reset {grid-area: res;}
+.picture {grid-area: p;}
+.name {grid-area: n;}
+.calorie {grid-area: c;}
+.header {grid-area: h;}
+.aside {grid-area: s;}
+.footer {grid-area: f;}
+.main {grid-area: m;}
+.c1 {grid-area: c1;}
+.c2 {grid-area: c2;}
+.c3 {grid-area: c3;}
+.c4 {grid-area: c4;}
+.c5 {grid-area: c5;}
+.c6 {grid-area: c6;}
+.c7 {grid-area: c7;}
+.c8 {grid-area: c8;}
+.c9 {grid-area: c9;}
